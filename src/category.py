@@ -1,15 +1,14 @@
 class Category:
-    name = str
-    description = str
-    produts = list
-    count_category = 0
-    count_products = 0
+    name = str #название категории
+    description = str #описание
+    products = list #лист с продуктами
+    count_category = 0 #количество категорий
+    count_products = 0 #количество продуктов
 
-    def __init__(self, name, description, produts=None):
-        self.product = None
+    def __init__(self, name, description, products=None):
         self.name = name
         self.description = description
-        self.produts = produts if produts else []
+        self.products = products if products else []
 
         Category.count_category += 1
-        Category.count_products += len(produts) if produts else 0
+        Category.count_products += len(products) if products else 0
