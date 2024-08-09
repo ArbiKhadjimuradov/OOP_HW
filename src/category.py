@@ -5,6 +5,7 @@ class Category:
     count_category = 0 #количество категорий
     count_products = 0 #количество продуктов
 
+
     def __init__(self, name, description, products=None):
         self.name = name
         self.description = description
