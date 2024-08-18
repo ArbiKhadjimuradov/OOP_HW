@@ -39,3 +39,9 @@ def product():
 @pytest.fixture
 def product_xiaomi():
     return Product("Xiaomi Redmi Note 11", "1024GB, Синий", 31000.0, 14)
+
+
+@pytest.fixture
+def product_list():
+    return {"name": "Samsung Galaxy S23 Ultra",
+                    "description": "256GB, Серый цвет, 200MP камера", "price": 180000.0, "quantity": 5}
