@@ -17,6 +17,9 @@ class Category:
         self.__products.append(products)
         Category.count_products += 1
 
+    def __str__(self):
+        return f"{self.name}, {self.count_category}:  {self.count_products} шт."
+
     @property
     def products(self):
         products_str = ""
