@@ -1,3 +1,5 @@
+from src.product import Product
+
 class Category:
     name = str  #название категории
     description = str  #описание
@@ -17,8 +19,12 @@ class Category:
         self.__products.append(products)
         Category.count_products += 1
 
+    def count_product(self):
+        return sum(product.quantity for product in self.__products)
+
     def __str__(self):
-        return f"{self.name}, {self.count_category}:  {self.count_products} шт."
+        total_products_count = sum([p.quantity for p in self.__products])
+        return f"{self.name}, количество продуктов: {total_products_count} шт."
 
     @property
     def products(self):
