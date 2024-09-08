@@ -16,3 +16,8 @@ def test_category_tv(first_category, second_category):
     assert second_category.name == "Телевизоры"
     assert second_category.description == "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником"
     assert len(second_category.products) == 42
+
+
+def test_middle_price(first_category, category_product):
+    assert first_category.middle_price() == 111629.62962962964
+    assert category_product.middle_price() == 0

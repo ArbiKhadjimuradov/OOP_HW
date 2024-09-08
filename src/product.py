@@ -28,6 +28,10 @@ class Product(BaseProduct, PrintMixin):
         self.description = description
         self.quantity = quantity
         self.__price = price
+        if quantity > 0:
+            self.quantity = quantity
+        else:
+            raise ValueError("Товар с нулевым количеством не может быть добавлен")
 
     def __str__(self):
         return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
